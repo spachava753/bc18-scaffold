@@ -1,4 +1,5 @@
 #!/bin/bash
+export BROWSER=google-chrome
 mtput() {
     if command -v tput > /dev/null; then
         tput $@

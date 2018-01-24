@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc8199b-ff2e-4a4b-96e3-06125f8b8788" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/python-to-java-player/Player.java" />
-      <change beforePath="$PROJECT_DIR$/examplefuncsplayer-java/Extra.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/examplefuncsplayer-java/Player.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/examplefuncsplayer-java/run.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/examplefuncsplayer-java/run.sh" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/redemption-v1/Player.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/redemption-v2/Player.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/redemption-v2/run.bat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/redemption-v2/run.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/redemption-v3/Player.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/redemption-v3/run.bat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/redemption-v3/run.sh" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bc-2018-ver2.iml" afterPath="$PROJECT_DIR$/bc-2018-ver2.iml" />
+      <change beforePath="$PROJECT_DIR$/python-to-java-player/Player.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/python-to-java-player/run.bat" afterPath="$PROJECT_DIR$/redemption-v1/run.bat" />
+      <change beforePath="$PROJECT_DIR$/python-to-java-player/run.sh" afterPath="$PROJECT_DIR$/redemption-v1/run.sh" />
+      <change beforePath="$PROJECT_DIR$/run_nodocker.sh" afterPath="$PROJECT_DIR$/run_nodocker.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,25 +28,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python-to-java-player/Player.java">
+        <entry file="file://$PROJECT_DIR$/redemption-v2/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="377">
+              <caret line="113" column="21" lean-forward="false" selection-start-line="106" selection-start-column="20" selection-end-line="113" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4303#4304#0" expanded="true" />
-                <element signature="e#4340#4341#0" expanded="true" />
+                <element signature="e#9765#9766#0" expanded="true" />
+                <element signature="e#9802#9803#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bcJNI.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/battlecode/java/bc/bcJNI.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/redemption-v3/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="253" column="104" lean-forward="false" selection-start-line="253" selection-start-column="80" selection-end-line="253" selection-end-column="104" />
-              <folding />
+            <state relative-caret-position="-2484">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#10677#10678#0" expanded="true" />
+                <element signature="e#10714#10715#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,6 +62,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>System.out.prin</find>
+      <find>System.out.pr</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,6 +85,11 @@
         <option value="$PROJECT_DIR$/sprint-player-java/Player.java" />
         <option value="$PROJECT_DIR$/myplayer-java/Player.java" />
         <option value="$PROJECT_DIR$/python-to-java-player/Player.java" />
+        <option value="$PROJECT_DIR$/player-v1/Player.java" />
+        <option value="$PROJECT_DIR$/player-v2/Player.java" />
+        <option value="$PROJECT_DIR$/redemption-v2/redemption/Player.java" />
+        <option value="$PROJECT_DIR$/redemption-v2/Player.java" />
+        <option value="$PROJECT_DIR$/redemption-v3/Player.java" />
       </list>
     </option>
   </component>
@@ -91,8 +114,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,47 +124,39 @@
             <path>
               <item name="bc-2018-ver2" type="b2602c69:ProjectViewProjectNode" />
               <item name="bc-2018-ver2" type="462c0819:PsiDirectoryNode" />
-              <item name="battlecode" type="462c0819:PsiDirectoryNode" />
+              <item name="redemption-v2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bc-2018-ver2" type="b2602c69:ProjectViewProjectNode" />
               <item name="bc-2018-ver2" type="462c0819:PsiDirectoryNode" />
-              <item name="battlecode" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bc-2018-ver2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bc-2018-ver2" type="462c0819:PsiDirectoryNode" />
-              <item name="battlecode" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bc-2018-ver2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bc-2018-ver2" type="462c0819:PsiDirectoryNode" />
-              <item name="examplefuncsplayer-c" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bc-2018-ver2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bc-2018-ver2" type="462c0819:PsiDirectoryNode" />
-              <item name="examplefuncsplayer-python" type="462c0819:PsiDirectoryNode" />
+              <item name="redemption-v3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/redemption-v2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sprint-player-java" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sprint-player-java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/redemption-v2" />
+      <recent name="$PROJECT_DIR$/redemption-v2/redemption" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -272,7 +285,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14635417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29270834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -295,32 +308,41 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myplayer-java/Player.java">
+    <entry file="file://$PROJECT_DIR$/redemption-v2/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9765#9766#0" expanded="true" />
+            <element signature="e#9802#9803#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/redemption-v2/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9765#9766#0" expanded="true" />
+            <element signature="e#9802#9803#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myplayer-java/Player.java" />
     <entry file="file://$PROJECT_DIR$/my-javaplayer/run.sh" />
     <entry file="file://$PROJECT_DIR$/sprint-player-java/run.bat" />
     <entry file="file://$PROJECT_DIR$/sprint-player-java/run.sh" />
     <entry file="file://$PROJECT_DIR$/sprint-player-java/Player.java" />
     <entry file="file://$PROJECT_DIR$/my-javaplayer/Player.java" />
-    <entry file="file://$PROJECT_DIR$/myplayer-java/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/myplayer-java/Player.java" />
     <entry file="file://$PROJECT_DIR$/examplefuncsplayer-python/run.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -328,29 +350,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python-to-java-player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4303#4304#0" expanded="true" />
-            <element signature="e#4340#4341#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/battlecode/java/bc/bcJNI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="253" column="104" lean-forward="false" selection-start-line="253" selection-start-column="80" selection-end-line="253" selection-end-column="104" />
+        <state relative-caret-position="234">
+          <caret line="258" column="78" lean-forward="false" selection-start-line="258" selection-start-column="67" selection-end-line="258" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redemption-v2/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redemption-v1/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4415#4416#0" expanded="false" />
+            <element signature="e#4452#4453#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redemption-v3/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redemption-v2/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="113" column="21" lean-forward="false" selection-start-line="106" selection-start-column="20" selection-end-line="113" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9765#9766#0" expanded="true" />
+            <element signature="e#9802#9803#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redemption-v3/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2484">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#10677#10678#0" expanded="true" />
+            <element signature="e#10714#10715#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
