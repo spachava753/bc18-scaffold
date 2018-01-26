@@ -39,6 +39,9 @@ public class Player {
         gameController.queueResearch(UnitType.Knight);
         gameController.queueResearch(UnitType.Rocket);
         gameController.queueResearch(UnitType.Rocket);
+        gameController.queueResearch(UnitType.Ranger);
+        gameController.queueResearch(UnitType.Ranger);
+        gameController.queueResearch(UnitType.Ranger);
 
         while (true) {
             //System.out.print("round: " + gameController.round());
@@ -236,6 +239,14 @@ public class Player {
                 }
             }
 
+
+            int count = 0;
+            for (Unit unit : knightMap.values()) {
+                if (unit.health() == 0) {
+                    count++;
+                }
+            }
+            System.out.println("The death counter is " + count);
 
             //System.out.println("---------------Finished Round-----------------");
             gameController.nextTurn();
