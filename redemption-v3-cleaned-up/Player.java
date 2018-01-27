@@ -46,14 +46,12 @@ public class Player {
         gameController.queueResearch(UnitType.Ranger);
         gameController.queueResearch(UnitType.Ranger);
 
-        GameMap gameMap = new GameMap();
-
         while (true) {
             System.out.print("round: " + gameController.round());
             System.out.println(" time left: " + gameController.getTimeLeftMs());
 
             if (knightMap.size() >= 40 && rangerMap.size() >= 25) {
-                VecUnit vecUnit = gameMap.getEarth_map().getInitial_units();
+                VecUnit vecUnit = gameController.startingMap(Planet.Earth).getInitial_units();
                 enemyMapLocation = new MapLocation[(int) (vecUnit.size()/2)];
 
                 int counter = 0;
@@ -155,7 +153,7 @@ public class Player {
         Location location = currentUnit.location();
         if (location.isOnMap()) {
 
-            VecUnit nearbyUnits = gameController.senseNearbyUnits(location.mapLocation(), 2);
+            VecUnit nearbyUnits = gameController.senseNearbyUnits(location.mapLocation(), (long) Math.sqrt(currentUnit.attackRange()));
             //System.out.println("Size of nearbyUnits: " + nearbyUnits.size() + " | current unit type: " + currentUnit.unitType());
             for (long x = 0; x < nearbyUnits.size(); x++) {
                 Unit nearbyUnit = nearbyUnits.get(x);
@@ -193,10 +191,16 @@ public class Player {
                 }
             }
 
-            if (closestEnemyLoc != null) {
+            if (closestEnemyLoc != null && !currentUnit.location().mapLocation().isWithinRange(currentUnit.attackRange(), closestEnemyLoc)) {
                 Direction direction = currentUnit.location().mapLocation().directionTo(closestEnemyLoc);
 
                 move(currentUnit.id(), direction);
+
+            } else if (closestEnemyLoc != null && currentUnit.location().mapLocation().isWithinRange((long) (currentUnit.attackRange()*0.2), closestEnemyLoc) && gameController.isMoveReady(currentUnit.id())) {
+
+                Direction directionToRunAway = closestEnemyLoc.directionTo(currentUnit.location().mapLocation());
+
+                move(currentUnit.id(), directionToRunAway);
 
             } else if (enemyMapLocation != null) {
                 for (MapLocation mapLocation : enemyMapLocation) {
@@ -205,7 +209,8 @@ public class Player {
                     }
                 }
 
-
+            } else {
+                tryToMoveInAnyDirection(currentUnit);
             }
 
             //System.out.println("Moved the unit");
@@ -256,6 +261,8 @@ public class Player {
                     //System.out.println("Attacked a unit");
                     continue;
 
+                } else {
+                    //tryToMoveInAnyDirection(currentUnit);
                 }
             }
 
