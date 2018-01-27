@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="game-competition">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/redemption-v3.zip!/" />
+      <root url="jar://$PROJECT_DIR$/myplayer-java.zip!/" />
+      <root url="jar://$PROJECT_DIR$/player-v1.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

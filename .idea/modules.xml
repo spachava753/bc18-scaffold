@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/battlecode/battlecode.iml" filepath="$PROJECT_DIR$/battlecode/battlecode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bc-2018-ver2.iml" filepath="$PROJECT_DIR$/bc-2018-ver2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/game-competition.iml" filepath="$PROJECT_DIR$/game-competition.iml" />
     </modules>
   </component>
 </project>
