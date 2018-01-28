@@ -17,6 +17,9 @@ public class Player {
 
     private static MapLocation[] enemyMapLocation = null;
 
+    private static Unit rocket = null;
+    private static List<MapLocation> marsMapLocations = new LinkedList<>();
+
     public static void main (String[] args) {
         factoryMap = Collections.synchronizedMap(factoryMap);
         builtFactoryMap = Collections.synchronizedMap(builtFactoryMap);
@@ -25,6 +28,17 @@ public class Player {
 
         //System.out.print("GameController connected");
         gameController = new GameController();
+
+        // mars landing spots
+        PlanetMap marsMap = gameController.startingMap(Planet.Mars);
+        for (int x = 0; x < marsMap.getWidth(); x++) {
+            for (int y = 0; y < marsMap.getHeight(); y++) {
+                MapLocation mapLocation = new MapLocation(Planet.Mars, x, y);
+                if (marsMap.isPassableTerrainAt(mapLocation) == 1) {
+                    marsMapLocations.add(mapLocation);
+                }
+            }
+        }
 
         myTeam = gameController.team();
         enemyTeam = Team.Blue == myTeam ? Team.Red : Team.Blue;
@@ -68,6 +82,13 @@ public class Player {
             for (long i = 0; i < vecUnits.size(); i++) {
                 Unit currentUnit = vecUnits.get(i);
 
+                if (currentUnit.location().isInSpace() || currentUnit.location().isInGarrison()) {
+                    continue;
+                }
+
+                if (currentUnit.unitType() == UnitType.Rocket)
+                    rocket = currentUnit;
+
                 // update the unit list
                 if (gameController.getTimeLeftMs() > 700) {
                     updateMaps(currentUnit);
@@ -98,12 +119,61 @@ public class Player {
                     continue;
                 }
 
-
+                // rocketCode
+                if (currentUnit.unitType() == UnitType.Rocket) {
+                    runRocket(currentUnit);
+                }
 
             }
 
             //System.out.println("---------------Finished Round-----------------");
             gameController.nextTurn();
+        }
+    }
+
+    private static void runRocket(Unit rocket) {
+        if (rocket.structureGarrison().size() == 8 && rocket.rocketIsUsed() == 0 && rocket.location().isOnMap()) {
+
+            if (gameController.canLaunchRocket(rocket.id(), marsMapLocations.get(0))) {
+                gameController.launchRocket(rocket.id(), marsMapLocations.get(0));
+                marsMapLocations.remove(0);
+            }
+
+        } else if (rocket.structureGarrison().size() <= 8 && rocket.structureGarrison().size() > 0
+                && rocket.rocketIsUsed() == 1 && rocket.location().isOnPlanet(Planet.Mars)) {
+
+            for (int i = 0; i < rocket.structureGarrison().size(); i++) {
+
+                for (Direction direction: Direction.values()) {
+
+                    if (gameController.canUnload(rocket.id(), direction)) {
+                        gameController.unload(rocket.id(), direction);
+                        break;
+
+                    }
+                }
+            }
+        } else if (rocket.rocketIsUsed() == 1 && rocket.location().isOnPlanet(Planet.Mars) && rocket.structureGarrison().size() > 0) {
+            // nothing for the rocket to do
+            gameController.disintegrateUnit(rocket.id());
+            rocket = null;
+            return;
+        }
+
+        // load units
+        if (rocket.structureGarrison().size() < 8) {
+
+            VecUnit vecUnit = gameController.senseNearbyUnitsByTeam(rocket.location().mapLocation(), rocket.visionRange(), myTeam);
+            for (int i = 0; i < vecUnit.size(); i++) {
+                Unit nearbyUnit = vecUnit.get(i);
+
+                if (nearbyUnit.unitType() == UnitType.Worker) {
+                    if (gameController.canLoad(rocket.id(), nearbyUnit.id())) {
+                        gameController.load(rocket.id(), nearbyUnit.id());
+                    }
+                }
+            }
+
         }
     }
 
@@ -218,7 +288,26 @@ public class Player {
     }
 
     private static void runWorker(Unit currentUnit) {
+
         harvest(currentUnit);
+
+        if (rocket == null) {
+            if (gameController.karbonite() > bc.bcUnitTypeBlueprintCost(UnitType.Rocket)) {
+                for (Direction direction : Direction.values()) {
+
+                    if (gameController.canBlueprint(currentUnit.id(), UnitType.Rocket, direction)) {
+                        if (currentUnit.location().mapLocation().getX() != gameController.startingMap(Planet.Earth).getWidth()
+                                && currentUnit.location().mapLocation().getY() != gameController.startingMap(Planet.Earth).getHeight()) {
+                            gameController.blueprint(currentUnit.id(), UnitType.Rocket, direction);
+                            //System.out.println("Blueprinted a factory!!!");
+                        }
+                    }
+                }
+            }
+        } else if (currentUnit.location().isOnMap()){
+            // try to board rocket
+            move(currentUnit.id(), currentUnit.location().mapLocation().directionTo(rocket.location().mapLocation()));
+        }
 
         if (gameController.karbonite() > bc.bcUnitTypeBlueprintCost(UnitType.Factory)) {
 
@@ -359,7 +448,7 @@ public class Player {
     }
 
     private static boolean canMove(int id, Direction direction) {
-        return gameController.isMoveReady(id) && gameController.canMove(id, direction);
+        return gameController.isMoveReady(id) && gameController.canMove(id, direction) && gameController.unit(id).location().isOnMap();
     }
 
     private static boolean move(int id, Direction direction) {
